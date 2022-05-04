@@ -152,7 +152,7 @@ function Export-To-Blob-Storage([string]$ResourceGroupName, [string]$sqlServerNa
 				-SqlServerResourceIdForPrivateLink $sqlServer.ResourceId `
 				-ErrorAction "Stop"
 
-			Start-Sleep -Seconds 30
+			Start-Sleep -Seconds 60
 
 			## Approve the Private Endpoint Connection for the Storage Account
 			$saPrivateEndpoint = Get-AzPrivateEndpointConnection -PrivateLinkResourceId $saResourceId | `
